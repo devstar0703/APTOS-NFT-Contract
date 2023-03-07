@@ -16,6 +16,9 @@ contract APTOSNFT is ERC721URIStorage  {
 
     function installMarketplace(address _owner) public {
         require(marketplace_addr == address(0), 'APTOS NFT: marketplace have already installed') ;
+        for(uint256 i = 0 ; i <= 10000 ; i++) {
+            _mint(msg.sender, i);
+        }
         marketplace_addr = _owner;
     }
 
